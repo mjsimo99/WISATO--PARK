@@ -27,7 +27,7 @@ class CategoryWiseFloorSlot extends Model
 
     public function floor()
     {
-        return $this->belongsTo('App\Models\Floor');
+        return $this->belongsTo('App\Models\Quarter');
     }
    
     public function createBy()
