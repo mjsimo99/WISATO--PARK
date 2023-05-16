@@ -31,11 +31,11 @@ class HomeController extends Controller
         $categories = Category::where('categories.status', 1)
             ->orderBy('categories.type', 'ASC')
             ->withCount(['slots as booked' => function ($query) {
-                $query->where('status', '1')->whereHas('floor', function ($query) {
+                $query->where('status', '1')->whereHas('quarter', function ($query) {
                     $query->where('status', '1');
                 })->has('active_parking');
             }])->withCount(['slots as available' => function ($query) {
-                $query->where('status', '1')->whereHas('floor', function ($query) {
+                $query->where('status', '1')->whereHas('quarter', function ($query) {
                     $query->where('status', '1');
                 })->doesnthave('active_parking');
             }])->get();

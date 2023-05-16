@@ -472,7 +472,7 @@ class ParkingController extends Controller
 			})
 			->with('active_parking')
 			->where('category_wise_floor_slots.status', 1)
-			->join('floors', 'floors.id', '=', 'category_wise_floor_slots.floor_id')
+			->join('floors', 'floors.id', '=', 'category_wise_floor_slots.quarter_id')
 			->orderBy('floors.level', 'DESC')
 			->select('category_wise_floor_slots.*')
 			->where('category_wise_floor_slots.status', 1)

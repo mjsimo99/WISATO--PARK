@@ -9,7 +9,7 @@ class CategoryWiseQtrSlot extends Model
     use ModelCommonMethodTrait;
     protected $fillable = [
         'id',
-        'floor_id',
+        'quarter_id',
         'category_id',
         'slot_name',
         'slotId',
@@ -25,7 +25,7 @@ class CategoryWiseQtrSlot extends Model
         return $this->belongsTo('App\Models\Category');
     }
 
-    public function floor()
+    public function quarter()
     {
         return $this->belongsTo('App\Models\Quarter');
     }

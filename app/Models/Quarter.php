@@ -26,6 +26,6 @@ class Quarter extends Model
 
     public function active_parking()
     {
-        return $this->hasOneThrough('App\Models\Parking', 'App\Models\CategoryWiseFloorSlot', 'floor_id', 'slot_id')->whereNull('out_time');
+        return $this->hasOneThrough('App\Models\Parking', 'App\Models\CategoryWiseFloorSlot', 'quarter_id', 'slot_id')->whereNull('out_time');
     }
 }
