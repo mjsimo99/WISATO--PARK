@@ -30,7 +30,7 @@ class Category extends Model
    
     public function slots()
     {
-        return $this->hasMany('App\Models\CategoryWiseFloorSlot');
+        return $this->hasMany('App\Models\CategoryWiseQtrSlot');
     }
 
     public function active_parking(){

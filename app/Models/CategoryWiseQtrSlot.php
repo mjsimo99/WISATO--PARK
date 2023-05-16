@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryWiseFloorSlot extends Model
+class CategoryWiseQtrSlot extends Model
 {
     use ModelCommonMethodTrait;
     protected $fillable = [
