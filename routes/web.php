@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -33,6 +34,6 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-
+Route::get('user-list', [UserController::class, 'index'])->name('user.list');
+Route::get('user-create', [UserController::class, 'create'])->name('user.create');
 require __DIR__.'/auth.php';
